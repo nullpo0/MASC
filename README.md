@@ -93,3 +93,9 @@ python train.py
 ```
 python predict.py
 ```
+---
+## pretrained model
+- facenet, clip, pyfeat은 preprocessing_pipeline.py 실행 시 자동으로 다운로드
+
+- fairface
+https://drive.google.com/file/d/11y0Wi3YQf21a_VcspUV4FwqzhMcfaVAB/view?usp=sharing
