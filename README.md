@@ -62,3 +62,34 @@
   - 이미지 열화(JPEG 압축, blur 등)에 대한 robustness
   를 정량적으로 평가
 - 최종적으로, **“고수준 의미 일관성”이 딥페이크 탐지에 유효한 단서가 될 수 있다**는 것을 실험적으로 보이는 것을 목표로 한다.
+
+---
+
+## Getting Started
+1. git clone
+```
+git clone https://github.com/nullpo0/MASC.git
+cd MASC
+```
+2. 가상환경 구축
+- Anaconda 환경 기준
+```
+conda create -n MASC python=3.11
+conda activate MASC
+pip install py-feat
+pip install facenet-pytorch
+pip uninstall torch torchvision
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+```
+3. preprocessing
+```
+python preprocessing_pipeline.py --data_root <dataset_path>
+```
+4. training
+```
+python train.py
+```
+5. predict
+```
+python predict.py
+```

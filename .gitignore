@@ -212,4 +212,10 @@ dataset
 legacy*
 
 *.pt
+
+CelebDF
+DFDC
+FaceForensics
+crop_debug
+*_csv
 *.ipynb
