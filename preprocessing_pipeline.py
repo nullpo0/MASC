@@ -585,7 +585,7 @@ def main() -> None:
     if not args.disable_facenet:
         extractors.append(FaceNetExtractor(device=device))
     if not args.disable_pyfeat:
-        extractors.append(PyFeatExtractor())
+        extractors.append(PyFeatExtractor(device=device))
     if not args.disable_clip:
         extractors.append(CLIPExtractor(device=device))
 

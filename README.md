@@ -80,10 +80,14 @@ pip install py-feat
 pip install facenet-pytorch
 pip uninstall torch torchvision
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+pip install git+https://github.com/openai/CLIP.git
 ```
 3. preprocessing
 ```
 python preprocessing_pipeline.py --data_root <dataset_path>
+
+# if device == cpu:
+    python preprocessing_pipeline.py --data_root <dataset_path> --batch-size 4 --device cpu 
 ```
 4. training
 ```
@@ -95,7 +99,11 @@ python predict.py
 ```
 ---
 ## pretrained model
-- facenet, clip, pyfeat은 preprocessing_pipeline.py 실행 시 자동으로 다운로드
+- facenet, clip, pyfeat은 preprocessing_pipeline.py 실행 시 자동으로 다운로드(꽤 오래 걸림)
 
 - fairface
 https://drive.google.com/file/d/11y0Wi3YQf21a_VcspUV4FwqzhMcfaVAB/view?usp=sharing
+
+---
+## 주의사항
+- 원활하게 작동하려면 CUDA GPU에서 하는것을 추천함. cpu로도 되긴 하지만 오래걸림.
